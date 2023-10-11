@@ -8,23 +8,36 @@ async function getPokemon(url) {
 
 async function PokeCard({ url }) {
   const pokemon = await getPokemon(url)
-  console.log(pokemon)
 
-  const {
-    "sprites.other.dream_world.front_default": pokemonAvatar,
-    forms: { name: pokemonName },
-    types,
-  } = pokemon
+  const { types } = pokemon
+
+  const pokemonAvatar = pokemon?.sprites?.other?.dream_world?.front_default
+  const pokemonName = pokemon?.forms[0]?.name || "N/A"
 
   return (
-    <article>
-      <img src={pokemonAvatar} alt={pokemonName} width={300} height={300} />
-      <h1>{pokemonName}</h1>
-      <ul>
-        {types.map((type) => (
-          <li key={type.type.name}>{type.type.name}</li>
-        ))}
-      </ul>
+    <article className="flex justify-between gap-3 flex-col shadow-md lg:hover:shadow-xl lg:hover:scale-105 transition-all rounded-md p-6 bg-slate-100">
+      <Image
+        src={pokemonAvatar}
+        alt={pokemonName}
+        width={300}
+        height={300}
+        className="max-h-80"
+        objectFit="cover"
+      />
+      <h1 className="text-xlg capitalize text-slate-900">{pokemonName}</h1>
+      <div className="flex gap-6">
+        <h4 className="text-slate-700">Type:</h4>
+        <ul>
+          {types.map((type) => (
+            <li key={type.type.name} className="text-md text-slate-500">
+              {type.type.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <button className="bg-orange-300 hover:bg-orange-400 transition-colors rounded-sm">
+        Details
+      </button>
     </article>
   )
 }
