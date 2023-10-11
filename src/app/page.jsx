@@ -4,7 +4,7 @@ import SearchForm from "@/components/SearchForm"
 
 function Home() {
   return (
-    <main className="px-5">
+    <main className="px-5 md:px-10 lg:px-16">
       <Hero />
       <SearchForm />
       <Pokemons />
