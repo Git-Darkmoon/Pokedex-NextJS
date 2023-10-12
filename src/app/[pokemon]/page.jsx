@@ -20,7 +20,7 @@ async function PokemonPage({ params }) {
   const { types } = pokemonData
 
   return (
-    <main className="h-[calc(100dvh-(5rem*2))] flex flex-col md:flex-row justify-between items-center px-5 md:px-10 lg:px-16">
+    <main className="min-h-[calc(100dvh-(5rem*2))] flex flex-col md:flex-row justify-between items-center px-5 md:px-10 lg:px-16">
       <picture>
         <Image src={pokeAvatar} alt={pokemonName} width={400} height={400} />
       </picture>
