@@ -25,7 +25,7 @@ function SearchForm() {
         autoComplete="off"
         name="search"
         id="pokeSearch"
-        value={searchValue}
+        value={searchValue.toLocaleLowerCase()}
         onChange={handleInputChange}
       />
       <Link
