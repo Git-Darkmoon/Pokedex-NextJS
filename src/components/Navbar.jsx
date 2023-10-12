@@ -4,7 +4,7 @@ import Link from "next/link"
 
 function Navbar() {
   return (
-    <nav className="w-full h-20 px-5 md:px-10 lg:px-16 flex justify-between items-center fixed z-10 bg-yellow-50 shadow-sm">
+    <nav className="w-full h-20 px-5 md:px-10 lg:px-16 flex justify-between items-center  bg-yellow-50 shadow-sm">
       <div className="w-full flex items-center gap-3">
         <Image
           className="h-12 w-12"
