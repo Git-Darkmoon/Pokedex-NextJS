@@ -1,9 +1,9 @@
 import PokemonCard from "./PokeCard"
 
-async function fetchPokemon() {
-  const resp = await fetch(
-    "https://pokeapi.co/api/v2/pokemon?offset=0&limit=20"
-  )
+async function fetchPokemon(
+  url = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=20"
+) {
+  const resp = await fetch(url)
   const data = await resp.json()
   return data
 }
