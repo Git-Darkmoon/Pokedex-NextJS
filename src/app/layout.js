@@ -14,11 +14,31 @@ const ffPoppins = Poppins({
 export const metadata = {
   title: "PokeNext JS",
   description: "PokeNext it's your reliable way to find pokemons.",
+  generator: "Next.js",
+  applicationName: "PokeNextJS",
+  referrer: "origin-when-cross-origin",
+  keywords: [
+    "Next.js",
+    "React",
+    "JavaScript",
+    "TailwindCSS",
+    "Pokemon",
+    "PokeApi",
+    "Frontend Development",
+  ],
+  authors: [
+    {
+      name: "Nicolas Mayorga",
+      url: "https://www.linkedin.com/in/nicol%C3%A1s-mayorga-7z0/",
+    },
+  ],
+  category: "education",
+  colorScheme: "light",
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={ffPoppins.className}>
         <Navbar />
         {children}
