@@ -21,10 +21,10 @@ async function PokemonPage({ params }) {
       </picture>
       <article className="flex flex-col w-[50%]">
         <h1 className="capitalize text-7xl">{pokemonName}</h1>
-        <div className="flex">
+        <div className="flex gap-1">
           {"("}
           {types.map((type) => {
-            return <h5 key={crypto.randomUUID()}>{type.type.name}</h5>
+            return <h5 key={crypto.randomUUID()}>{type.type.name} </h5>
           })}
           {")"}
         </div>
