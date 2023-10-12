@@ -3,7 +3,7 @@ import pikachuLogo from "@/assets/pikachu-hero.webp"
 
 function Hero() {
   return (
-    <section className="h-[100dvh] flex justify-center items-center flex-col md:flex-row ">
+    <section className="h-[calc(100dvh-5rem)] flex justify-center items-center flex-col md:flex-row ">
       <article>
         <h1 className="text-3xl ">
           Find all your favorite Pokemon in one search
