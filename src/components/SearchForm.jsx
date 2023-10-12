@@ -11,7 +11,10 @@ function SearchForm() {
   }
 
   return (
-    <section className="flex flex-col bg-yellow-100 shadow-lg my-4 p-5 rounded-md border-solid border-2 border-orange-200 md:w-[calc(100%/2)] mx-auto">
+    <section
+      id="query"
+      className="flex flex-col bg-yellow-100 shadow-lg my-4 p-5 rounded-md border-solid border-2 border-orange-200 md:w-[calc(100%/2)] mx-auto"
+    >
       <label htmlFor="pokeSearch" className="">
         Looking for some specific Pokemon?
       </label>
