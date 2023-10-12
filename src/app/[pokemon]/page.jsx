@@ -6,6 +6,11 @@ async function fetchPokemon(param) {
   return data
 }
 
+export const metadata = {
+  title: `PokeNext JS - details`,
+  description: `Single page for seeing details of an specific pokemon in the PokeNext JS web app`,
+}
+
 async function PokemonPage({ params }) {
   const { pokemon } = params
   const pokemonData = await fetchPokemon(pokemon)
