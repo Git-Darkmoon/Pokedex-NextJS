@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 async function getPokemon(url) {
   const resp = await fetch(url)
@@ -15,14 +16,13 @@ async function PokeCard({ url }) {
   const pokemonName = pokemon?.forms[0]?.name || "N/A"
 
   return (
-    <article className="flex justify-between gap-3 flex-col shadow-md lg:hover:shadow-xl lg:hover:scale-105 transition-all rounded-md p-6 bg-slate-100">
+    <article className="flex justify-between gap-3 flex-col shadow-md lg:hover:shadow-xl lg:hover:scale-105 transition-all rounded-md p-6 bg-slate-100 object-cover object-center">
       <Image
         src={pokemonAvatar}
         alt={pokemonName}
         width={300}
         height={300}
-        className="max-h-80"
-        objectFit="cover"
+        className="max-h-80 "
       />
       <h1 className="text-xlg capitalize text-slate-900">{pokemonName}</h1>
       <div className="flex gap-6">
@@ -35,9 +35,12 @@ async function PokeCard({ url }) {
           ))}
         </ul>
       </div>
-      <button className="bg-orange-300 hover:bg-orange-400 transition-colors rounded-sm">
+      <Link
+        href={`/${pokemonName}`}
+        className="bg-orange-300 px-2 py-1 hover:bg-orange-400 transition-colors rounded-sm text-center"
+      >
         Details
-      </button>
+      </Link>
     </article>
   )
 }
