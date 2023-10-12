@@ -1,5 +1,5 @@
 import Image from "next/image"
-import pokeLogo from "@/assets/pokeball.webp"
+import pokeLogo from "../../public/pokeball.webp"
 import Link from "next/link"
 
 function Navbar() {
@@ -19,7 +19,7 @@ function Navbar() {
           PokeNext <span className="text-red-500">JS</span>
         </h1>
       </div>
-      <ul className="flex justify-center items-center gap-3">
+      <ul className="flex justify-center items-center gap-3 md:gap-6">
         <li>
           <Link className="hover:text-orange-500 transition-colors" href={"/"}>
             Home
