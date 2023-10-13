@@ -19,7 +19,7 @@ function SearchForm() {
         Looking for some specific Pokemon?
       </label>
       <input
-        className="rounded-sm my-3 p-2 focus:outline-8 focus:outline-solid focus:outline-orange-300"
+        className="rounded-md my-3 py-2 px-4 focus:outline-8 focus:outline-solid focus:outline-orange-300"
         type="search"
         placeholder="i.e. Pikachu"
         autoComplete="off"

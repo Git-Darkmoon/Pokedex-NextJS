@@ -37,7 +37,7 @@ async function PokeCard({ url }) {
       </div>
       <Link
         href={`/${pokemonName}`}
-        className="bg-orange-300 px-2 py-1 hover:bg-orange-400 transition-colors rounded-sm text-center"
+        className="bg-orange-400 px-2 py-1 hover:bg-orange-500 transition-colors rounded-md text-center"
       >
         Details
       </Link>
